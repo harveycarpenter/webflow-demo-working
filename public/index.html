@@ -1,0 +1,9 @@
+<button onclick="handleButtonClick()">Create DOM Element (no errors)</button>
+  <script>
+    async function handleButtonClick() {
+      console.log('Webflow object is', webflow); // *Should* log the Webflow object, complete with createDOM
+      const element = await webflow.getSelectedElement();
+      console.log('element is', element); // Logs the selected element
+      const newEl = webflow.createDOM("p"); // Errors because there's no webflow.createDOM
+    }
+  </script>
